@@ -13,20 +13,35 @@ public class UserForm implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /** 漢字氏名 */
+    /** 漢字 （性） */
     @Required
-    @Domain("kanjiName")
-    private String kanjiName;
+    @Domain("kanjiFamilyName")
+    private String kanjiFamilyName;
 
-    /** カナ氏名 */
+    /** 漢字 （名） */
     @Required
-    @Domain("kanaName")
-    private String kanaName;
+    @Domain("kanjiFirstName")
+    private String kanjiFirstName;
 
-    /** 英字氏名 */
+    /** カナ氏名（性） */
     @Required
-    @Domain("alphabetName")
-    private String alphabetName;
+    @Domain("kanaFamilyName")
+    private String kanaFamilyName;
+
+    /** カナ氏名（名） */
+    @Required
+    @Domain("kanaFirstName")
+    private String kanaFirstName;
+
+    /** 英字氏名（性） */
+    @Required
+    @Domain("alphabetFamilyName")
+    private String alphabetFamilyName;
+
+    /** 英字氏名（名） */
+    @Required
+    @Domain("alphabetFirstName")
+    private String alphabetFirstName;
 
     /** 性別 */
     @Required
@@ -91,28 +106,28 @@ public class UserForm implements Serializable {
     @Domain("medicalHistory")
     private String medicalHistory;
 
-    public String getKanjiName() {
-        return kanjiName;
+    public String getKanjiFamilyName() {
+        return kanjiFamilyName;
     }
 
-    public void setKanjiName(String kanjiName) {
-        this.kanjiName = kanjiName;
+    public String getKanjiFirstName() {
+        return kanjiFirstName;
     }
 
-    public String getKanaName() {
-        return kanaName;
+    public String getKanaFamilyName() {
+        return kanaFamilyName;
     }
 
-    public void setKanaName(String kanaName) {
-        this.kanaName = kanaName;
+    public String getKanaFirstName() {
+        return kanaFirstName;
     }
 
-    public String getAlphabetName() {
-        return alphabetName;
+    public String getAlphabetFamilyName() {
+        return alphabetFamilyName;
     }
 
-    public void setAlphabetName(String alphabetName) {
-        this.alphabetName = alphabetName;
+    public String getAlphabetFirstName() {
+        return alphabetFirstName;
     }
 
     public String getDateOfBirth() {
