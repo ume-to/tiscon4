@@ -44,8 +44,19 @@ public class Tiscon4DomainBean {
     private String gender;
 
     /** 生年月日 */
-    @YYYYMMDD()
-    private String dateOfBirth;
+    @Digits(integer = 4, fraction = 0)
+    @Length(max = 4, min = 4)
+    private String dateOfBirthyear;
+
+    /** 生年月日 */
+    @Digits(integer = 2, fraction = 0)
+    @Length(max = 2, min = 2)
+    private String dateOfBirthmonth;
+
+    /** 生年月日 */
+    @Digits(integer = 2, fraction = 0)
+    @Length(max = 2, min = 2)
+    private String dateOfBirthday;
 
     /** 郵便番号 */
     @ZipNumber

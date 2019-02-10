@@ -130,12 +130,28 @@
                                 </td>
                                 <td>
                                     <p>例：1990/01/01</p>
-                                    <div class="field" th:classappend="${errors.hasError('dateOfBirth')} ? 'error'">
-                                        <input type="text" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
-                                        <p th:if="${errors.hasError('dateOfBirth')}"
-                                           th:text="${errors.getMessage('dateOfBirth')}" class="error-message">
+                                     <div style="display:inline-flex">
+                                      <div class="field" th:classappend="${errors.hasError('dateOfBirthyear')} ? 'error'">
+                                        <input type="text" name="dateOfBirthyear" th:value="${form.dateOfBirthyear}"/>
+                                        <p th:if="${errors.hasError('dateOfBirthyear')}"
+                                           th:text="${errors.getMessage('dateOfBirthyear')}" class="error-message">
                                         </p>
-                                    </div>
+                                      </div>
+                                         <p></p>
+                                         <div class="field" th:classappend="${errors.hasError('dateOfBirthmonth')} ? 'error'">
+                                             <input type="text" name="dateOfBirthmonth" th:value="${form.dateOfBirthmonth}"/>
+                                             <p th:if="${errors.hasError('dateOfBirthmonth')}"
+                                                th:text="${errors.getMessage('dateOfBirthmonth')}" class="error-message">
+                                             </p>
+                                         </div>
+                                         <p></p>
+                                         <div class="field" th:classappend="${errors.hasError('dateOfBirthday')} ? 'error'">
+                                             <input type="text" name="dateOfBirthday" th:value="${form.dateOfBirthday}"/>
+                                             <p th:if="${errors.hasError('dateOfBirthday')}"
+                                                th:text="${errors.getMessage('dateOfBirthday')}" class="error-message">
+                                             </p>
+                                         </div>
+                                     </div>
                                 </td>
                             </tr>
                             <tr>
