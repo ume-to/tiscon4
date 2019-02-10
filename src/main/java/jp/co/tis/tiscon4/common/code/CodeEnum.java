@@ -17,4 +17,12 @@ public interface CodeEnum {
      * @return コード値
      */
     String getCode();
+
+    /**
+     * カテゴリを返却する。
+     *
+     * @return カテゴリ
+     */
+    String getCategory();
+
 }

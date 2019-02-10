@@ -68,6 +68,7 @@ public class OrderAction {
         ctx.setRequestScopedVar("marriedTypes", MarriedType.values());
         ctx.setRequestScopedVar("jobTypes", JobType.values());
         ctx.setRequestScopedVar("treatedTypes", TreatedType.values());
+        ctx.setRequestScopedVar("industryTypes", IndustryType.values());
 
         return new HttpResponse("user.html");
     }
@@ -114,6 +115,7 @@ public class OrderAction {
         ctx.setRequestScopedVar("marriedTypes", MarriedType.values());
         ctx.setRequestScopedVar("jobTypes", JobType.values());
         ctx.setRequestScopedVar("treatedTypes", TreatedType.values());
+        ctx.setRequestScopedVar("industryTypes", IndustryType.values());
 
         return new HttpResponse("user.html");
     }

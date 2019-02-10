@@ -2,6 +2,7 @@ package jp.co.tis.tiscon4.form;
 
 import jp.co.tis.tiscon4.common.code.JobType;
 import jp.co.tis.tiscon4.common.code.TreatedType;
+import jp.co.tis.tiscon4.common.code.IndustryType;
 import nablarch.core.util.StringUtil;
 import nablarch.core.validation.ee.Domain;
 import nablarch.core.validation.ee.Required;
@@ -90,6 +91,26 @@ public class UserForm implements Serializable {
     /** 既往歴 */
     @Domain("medicalHistory")
     private String medicalHistory;
+
+    /** 勤務先 */
+    @Domain("employerName")
+    private String employerName;
+
+    /** 勤務先郵便番号 */
+    @Domain("employerZipCode")
+    private String employerZipCode;
+
+    /** 勤務先住所 */
+    @Domain("employerAddress")
+    private String employerAddress;
+
+    /** 勤務先電話番号 */
+    @Domain("employerPhoneNumber")
+    private String employerPhoneNumber;
+
+    /** 業種 */
+    @Domain("industryType")
+    private String industryType;
 
     public String getKanjiName() {
         return kanjiName;
@@ -218,6 +239,47 @@ public class UserForm implements Serializable {
     public void setMedicalHistory(String medicalHistory) {
         this.medicalHistory = medicalHistory;
     }
+
+    public String getEmployerName() {
+        return employerName;
+    }
+
+    public void setEmployerName(String employerName) {
+        this.employerName = employerName;
+    }
+
+    public String getEmployerZipCode() {
+        return employerZipCode;
+    }
+
+    public void setEmployerZipCode(String employerZipCode) {
+        this.employerZipCode = employerZipCode;
+    }
+
+    public String getEmployerAddress() {
+        return employerAddress;
+    }
+
+    public void setEmployerAddress(String employerAddress) {
+        this.employerAddress = employerAddress;
+    }
+
+    public String getEmployerPhoneNumber() {
+        return employerPhoneNumber;
+    }
+
+    public void setEmployerPhoneNumber(String employerPhoneNumber) {
+        this.employerPhoneNumber = employerPhoneNumber;
+    }
+
+    public String getIndustryType() {
+        return industryType;
+    }
+
+    public void setIndustryType(String industryType) {
+        this.industryType = industryType;
+    }
+
 
     /**
      * その他の職業欄が正しく入力されているかどうか判定する。
