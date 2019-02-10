@@ -14,20 +14,35 @@ public class UserForm implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /** 漢字氏名 */
+    /** 漢字 （姓） */
     @Required
     @Domain("kanjiName")
-    private String kanjiName;
+    private String kanjiFamilyName;
 
-    /** カナ氏名 */
+    /** 漢字 （名） */
+    @Required
+    @Domain("kanjiName")
+    private String kanjiFirstName;
+
+    /** カナ氏名（姓） */
     @Required
     @Domain("kanaName")
-    private String kanaName;
+    private String kanaFamilyName;
 
-    /** 英字氏名 */
+    /** カナ氏名（名） */
+    @Required
+    @Domain("kanaName")
+    private String kanaFirstName;
+
+    /** 英字氏名（姓） */
     @Required
     @Domain("alphabetName")
-    private String alphabetName;
+    private String alphabetFamilyName;
+
+    /** 英字氏名（名） */
+    @Required
+    @Domain("alphabetName")
+    private String alphabetFirstName;
 
     /** 性別 */
     @Required
@@ -112,28 +127,50 @@ public class UserForm implements Serializable {
     @Domain("industryType")
     private String industryType;
 
-    public String getKanjiName() {
-        return kanjiName;
+    public String getKanjiFamilyName() {
+        return kanjiFamilyName;
     }
 
-    public void setKanjiName(String kanjiName) {
-        this.kanjiName = kanjiName;
+    public void setKanjiFamilyName(String kanjiFamilyName) {
+        this.kanjiFamilyName = kanjiFamilyName;
     }
 
-    public String getKanaName() {
-        return kanaName;
+    public String getKanjiFirstName() {
+        return kanjiFirstName;
     }
 
-    public void setKanaName(String kanaName) {
-        this.kanaName = kanaName;
+    public void setKanjiFirstName(String kanjiFirstName) {
+        this.kanjiFirstName = kanjiFirstName;
     }
 
-    public String getAlphabetName() {
-        return alphabetName;
+    public String getKanaFamilyName() {
+        return kanaFamilyName;
     }
 
-    public void setAlphabetName(String alphabetName) {
-        this.alphabetName = alphabetName;
+    public void setKanaFamilyName(String kanaFamilyName) {
+        this.kanaFamilyName = kanaFamilyName;
+    }
+
+    public String getKanaFirstName() {
+        return kanaFirstName;
+    }
+
+    public void setKanaFirstName(String kanaFirstName) {
+        this.kanaFirstName = kanaFirstName;
+    }
+
+    public String getAlphabetFamilyName() {
+        return alphabetFamilyName;
+    }
+    public void setAlphabetFamilyName(String alphabetFamilyName) {
+        this.alphabetFamilyName = alphabetFamilyName;
+    }
+
+    public String getAlphabetFirstName() {
+        return alphabetFirstName;
+    }
+    public void setAlphabetFirstName(String alphabetFirstName) {
+        this.alphabetFirstName = alphabetFirstName;
     }
 
     public String getDateOfBirth() {
